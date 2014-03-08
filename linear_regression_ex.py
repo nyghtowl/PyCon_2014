@@ -6,11 +6,11 @@ Initial code taken straight from sci-kit learn
 '''
 
 import pandas as pd
-
 import numpy as np
-import matplotlib.pyplot as plt
 import seaborn
 
+
+import matplotlib.pyplot as plt
 from sklearn import datasets, linear_model
 from sklearn.cross_validation import train_test_split
 
@@ -51,6 +51,7 @@ def visualize(model, X_test, y_test):
     plt.title('Sci-kit Learn Diabetes Linear Regression')
     plt.xlabel('?')
     plt.ylabel('?')
+    plt.savefig('linear_example.png')
 
     plt.show()
 
