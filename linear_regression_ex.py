@@ -2,7 +2,8 @@
 Linear Regression Example
 
 Working on this for PyCon2014 
-Initial code taken straight from sci-kit learn
+
+
 '''
 
 import pandas as pd
