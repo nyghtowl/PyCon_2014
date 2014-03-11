@@ -34,10 +34,10 @@ def predict_eval(model, X_test, y_test):
     #The coefficients
     print('Coefficients: %.2f' % model.coef_)
 
-    # The mean square error
-    print('Residual sum of squares: %.2f' % np.mean((model.predict(X_test) - y_test) ** 2))
+    # The mean square error - how predictions will vary - standard deviation
+    print('Root mean square error: %.2f' % np.mean((model.predict(X_test) - y_test) ** 2))
 
-    # Explained variance score: 1 is perfect prediction
+    # R squared / proportion of variance explained by model / model accuracy: 1 is perfect prediction
     print('Variance score: %.2f' % model.score(X_test, y_test))
 
 def visualize(model, X_test, y_test):
