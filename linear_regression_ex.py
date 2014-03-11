@@ -15,16 +15,13 @@ from sklearn import datasets, linear_model
 from sklearn.cross_validation import train_test_split
 
 
-def load_data(filename=load_diabetes):
-    #diabetes = datasets.load_diabetes()
-    if filename = load_diabetes:
-        return datasets.filename()
-    # else
-    #     return pd.read_csv(filename, sep='\t', header='infer')
+def load_data():
+    return datasets.load_diabetes()
 
 def create_datasets(data):
-    X = diabetes.data[:, np.newaxis] # Use only one feature
-
+    X = data.data[:, np.newaxis] # Use only one feature
+    print "X", X.shape
+    print "X every 2", X[:, :].shape
     X_train, X_test, y_train, y_test = train_test_split(X[:, :, 2], data.target, test_size=0.30)
 
     return X_train, X_test, y_train, y_test

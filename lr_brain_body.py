@@ -8,11 +8,11 @@ from sklearn import datasets, linear_model
 from sklearn.cross_validation import train_test_split
 
 def load_data(filename):
-    return pd.read_csv('./data/brain_body_weight.txt', sep=r"\s*", header=0, index_col=0)
+    return pd.read_csv(filename, sep=r"\s*", header=0)
 
 def create_datasets(data):
-    X, y = data['BodyWeight'], data['BrainWeight'] # Use only one feature
-    return  train_test_split(X, y, test_size=0.30)
+    X, y = np.array(data['Head_Size']), np.array(data['Brain_Weight'])
+    return  train_test_split(X[:,np.newaxis], y, test_size=0.30)
 
 def build_model(X_train, y_train):
     ml = linear_model.LinearRegression()# Create regression object
@@ -28,15 +28,15 @@ def predict_eval(model, X_test, y_test):
 def visualize(model, X_test, y_test):
     plt.scatter(X_test, y_test,  color='black')
     plt.plot(X_test, model.predict(X_test), color='blue', linewidth=3)
-    plt.title('BSci-kit Learn Diabetes Linear Regression')
-    plt.xlabel('Body Weight')
-    plt.ylabel('Brain Weight')
+    plt.title('Linear Regression Predict Brain Weight by Head Size')
+    plt.xlabel('Head Size (cm^3)')
+    plt.ylabel('Brain Weight (grams)')
     plt.savefig('body_brain_lr_ex.png')
 
     plt.show()
 
 def main():
-    data = load_data('./data/brain_body_weight.txt')
+    data = load_data('./data/female_brain_body.txt')
     X_train, X_test, y_train, y_test = create_datasets(data)
     model = build_model(X_train, y_train)
     predict_eval(model, X_test, y_test)

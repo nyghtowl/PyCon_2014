@@ -34,3 +34,19 @@ In various states, population and drinking data was recorded. There are 46 rows 
 - A4, the consumption of hard liquor per capita,
 - B,  the death rate from cirrhosis.
 
+
+
+Dataset:  brainhead.dat
+http://www.stat.ufl.edu/~winner/data/brainhead.dat
+
+Source: R.J. Gladstone (1905). "A Study of the Relations of the Brain to 
+to the Size of the Head", Biometrika, Vol. 4, pp105-123
+
+Description: Brain weight (grams) and head size (cubic cm) for 237
+adults classified by gender and age group.
+
+Variables/Columns
+Gender   8   /* 1=Male, 2=Female  */
+Age Range  16   /* 1=20-46, 2=46+  */
+Head size (cm^3)  21-24
+Brain weight (grams)  29-32
