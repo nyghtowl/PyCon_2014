@@ -1,4 +1,4 @@
-# PyCon 2014 Example Linear Regression
+# PyCon 2014 Talk - Linear Regression Example
 
 This is the linear regression example used in my 'How to get started with Machine Learning' PyCon 2014 talk. 
 
