@@ -1,12 +1,12 @@
 # PyCon 2014 Example Linear Regression
 
-This is a linear regression example shown in my 'How to get started with Machine Learning' PyCon 2014 talk. 
+This is the linear regression example used in my 'How to get started with Machine Learning' PyCon 2014 talk. 
 
 
 Files
 --------
 
-Main script written in lr_brain_body.py. The ipython notebook provides example code snippets and show the development of this example.
+The full pythonb script is provided in lr_brain_body.py. The ipython notebook provides example code snippets and shows how this example was developed.
 
 All png files are illustration outputs used in the presentation.
 
