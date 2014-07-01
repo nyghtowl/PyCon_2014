@@ -38,4 +38,4 @@ Built initial linear regression with code taken straight from sci-kit learn.
 
 - Code source: Jaques Grobler
 - License: BSD 3 clause
-- Code was replaced and reworked by dataset above.
+- Code was replaced by the above dataset and reworked
