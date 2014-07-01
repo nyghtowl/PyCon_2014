@@ -31,11 +31,11 @@ Brain weight (grams)  29-32 - converted to pounds
 
 
 
-First Draft
+First Draft (not used in presentation)
 --------
 
 Built initial linear regression with code taken straight from sci-kit learn.
 
 - Code source: Jaques Grobler
 - License: BSD 3 clause
-- Code has been modified since
+- Code was replaced and reworked by dataset above.
