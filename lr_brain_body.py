@@ -16,8 +16,8 @@ def cm_inch(cm):
 def grm_pd(grm):
     return float(grm) * 0.00220462
 
-def load_data(filename):
-    return pd.read_csv(filename, sep=r"\s*",  converters={'Head_Size': cm_inch, 'Brain_Weight': grm_pd}, header=0)
+def load_data(filename, incols):
+    return pd.read_csv(filename, sep=r"\s*",  converters={'Head_Size': cm_inch, 'Brain_Weight': grm_pd}, names=incols)
 
 def create_datasets(X, y, random):
     return  train_test_split(X, y, test_size=0.30, random_state=random)
@@ -74,7 +74,9 @@ def model_ex_predict(model, X, y, title, fn):
     design_plot(fn)
 
 def main():
-    data = load_data('./data/both_brain_body.txt')    
+    cols = ['Gender', 'Age_Range', 'Head_Size', 'Brain_Weight']
+    data = load_data('brainhead.dat', incols=cols)
+    
     X, y = np.array(data['Head_Size']), np.array(data['Brain_Weight'])
     # 6 overfits
     X_train, X_test, y_train, y_test = create_datasets(X[:,np.newaxis], y, 1)
